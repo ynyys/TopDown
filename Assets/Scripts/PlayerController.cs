@@ -6,6 +6,8 @@ using UnityEngine.Scripting.APIUpdating;
 
 public class PlayerController : MonoBehaviour
 {
+    //Variables
+    public Weapon weapon;
     //Set player move speed
     public float moveSpeed = 2.0f;
     //Player direction
@@ -28,6 +30,11 @@ public class PlayerController : MonoBehaviour
         movDir.y = Input.GetAxisRaw("Vertical");
 
         mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+        if (Input.GetButton("Fire1"))
+        {
+            Shoot();
+        }
     }
 
     //Movement
@@ -50,5 +57,11 @@ public class PlayerController : MonoBehaviour
         transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
 
         //transform.up = new Vector2(dirToMousePos.x, dirToMousePos.y);
+    }
+
+    public void Shoot()
+    {
+        weapon.Shoot();
+
     }
 }

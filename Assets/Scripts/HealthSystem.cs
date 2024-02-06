@@ -23,13 +23,14 @@ public class HealthSystem : MonoBehaviour
         currentHealth -= _damage;
         UpdateHealthBar();
 
-        //Check player is not at 0 health
+        //Check objetc/player is not at 0 health
         if(currentHealth <= 0)
         {
             Die();
         }
     }
 
+    //Updating physical health bar
     public void UpdateHealthBar()
     {
         float fill = currentHealth / maxHealth;

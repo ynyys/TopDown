@@ -27,7 +27,12 @@ public class Bullet : MonoBehaviour
     //Optimisation (Destroying bullets on collison)
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Destroy(collision.gameObject);
+        if(collision.gameObject.GetComponent<HealthSystem>()!= null)
+        {
+            HealthSystem _healthSystem = collision.gameObject.GetComponent<HealthSystem>();
+            _healthSystem.TakeDamage(damage);
+        }
+        //Destroy(collision.gameObject);
         Destroy(gameObject);
     }
 }

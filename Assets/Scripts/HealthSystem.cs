@@ -8,7 +8,7 @@ public class HealthSystem : MonoBehaviour
     //Variables
     public float maxHealth;
     float currentHealth;
-
+    
 
     public Image mask;
     // Start is called before the first frame update

@@ -97,6 +97,7 @@ GameObject:
   - component: {fileID: 6375189072728325123}
   - component: {fileID: 2633928558657250821}
   - component: {fileID: 6562429112780783084}
+  - component: {fileID: 5289837530391636642}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -209,3 +210,16 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.6
+--- !u!114 &5289837530391636642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5823996910328931095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9258b8fba1316044b44382b997f0a98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _damageAmount: 10

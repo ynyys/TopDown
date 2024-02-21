@@ -58408,6 +58408,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1133515718601317561, guid: d0de2ceb743afa24188892125968ce43, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5823996910328931095, guid: d0de2ceb743afa24188892125968ce43, type: 3}
       propertyPath: m_Name
       value: Enemy
@@ -58466,14 +58470,14 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 519420032}
-  - {fileID: 953861629}
   - {fileID: 1823996343}
   - {fileID: 470343811345662864}
   - {fileID: 471143424}
   - {fileID: 1421862761}
   - {fileID: 303611014}
   - {fileID: 1646297261}
-  - {fileID: 1413509447}
-  - {fileID: 1435418053}
   - {fileID: 1903447609}
   - {fileID: 1074090221}
+  - {fileID: 953861629}
+  - {fileID: 1413509447}
+  - {fileID: 1435418053}

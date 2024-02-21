@@ -44,9 +44,18 @@ TagManager:
   - name: Background
     uniqueID: 1376301231
     locked: 0
-  - name: Environment
+  - name: Collectables
+    uniqueID: 2091609139
+    locked: 0
+  - name: Bullet
+    uniqueID: 663595911
+    locked: 0
+  - name: Player
     uniqueID: 2921081189
     locked: 0
-  - name: Gameplay
+  - name: Enemy
     uniqueID: 94700715
+    locked: 0
+  - name: misc
+    uniqueID: 1373266231
     locked: 0

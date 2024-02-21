@@ -13,11 +13,11 @@ public class EnemyHealth : MonoBehaviour
         health = maxHealth;
     }
 
-    public void TakeDamage (float damageAmount)
+    public void TakeDamage(float damageAmount)
     {
-        health -= maxHealth;
+        health -= damageAmount;
 
-        if (health <= 0 )
+        if(health <= 0 )
         {
             Destroy(gameObject);
         }

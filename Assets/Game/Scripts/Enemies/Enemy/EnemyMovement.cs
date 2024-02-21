@@ -11,7 +11,9 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField]
     private float _rotationSpeed;
 
+    //Rigid body
     private Rigidbody2D _rigidbody;
+    //Get the player awareness controller 
     private PlayerAwarenessController _playerAwarenessController;
     private Vector2 _targetDirection;
 

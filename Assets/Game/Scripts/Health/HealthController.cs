@@ -13,6 +13,7 @@ public class HealthController : MonoBehaviour
     private float _maximumHealth;
 
     public float RemainingHealthPercentage
+
     {
         //Calculting haelth percentage
         get
@@ -26,6 +27,11 @@ public class HealthController : MonoBehaviour
 
     //When health reaches zero
     public UnityEvent OnDied;
+
+    //Enable invinibility on damage
+    public UnityEvent OnDamaged;
+
+    public UnityEvent OnHealthChanged;
 
     //Taking damage
     public void TakeDamage(float damageAmount)
@@ -44,6 +50,8 @@ public class HealthController : MonoBehaviour
         //Subtract damage from current health
         _currentHealth -= damageAmount;
 
+        OnHealthChanged.Invoke();
+
         //Change minus values to zero in case that occurs
         if (_currentHealth < 0)
         {
@@ -54,6 +62,10 @@ public class HealthController : MonoBehaviour
         if (_currentHealth == 0)
         {
             OnDied.Invoke();
+        }
+        else
+        {
+            OnDamaged.Invoke();
         }
     }
 
@@ -68,6 +80,8 @@ public class HealthController : MonoBehaviour
 
         //Add health
         _currentHealth += amountToAdd;
+
+        OnHealthChanged.Invoke();
 
         //Prevent health from going over maximum
         if (_currentHealth > _maximumHealth)

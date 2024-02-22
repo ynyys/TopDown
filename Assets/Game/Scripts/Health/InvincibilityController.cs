@@ -2,17 +2,29 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour
+public class InvincibilityController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    // Variables
+
+    //reference health script
+    private HealthController _healthController;
+
+    //Get health controller component
+    private void Awake()
     {
-        
+        _healthController = GetComponent<HealthController> ();
     }
 
-    // Update is called once per frame
-    void Update()
+    //Start invincibility period
+    public void StartInvincibility(float invincibilityDuration)
     {
-        
+       StartCoroutine(InvincibilityCoroutine(invincibilityDuration)); 
+    }
+
+    private IEnumerator InvincibilityCoroutine(float invincibilityDuration)
+    {
+        _healthController.IsInvincible = true;
+        yield return new WaitForSeconds(invincibilityDuration);
+        _healthController.IsInvincible = false;
     }
 }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class HealthController : MonoBehaviour
 {
@@ -20,11 +21,22 @@ public class HealthController : MonoBehaviour
         }
     }
 
+    //Allow player to be invincible for every frame taken damage
+    public bool IsInvincible { get; set; }
+
+    //When health reaches zero
+    public UnityEvent OnDied;
+
     //Taking damage
     public void TakeDamage(float damageAmount)
     {
         //If health is zero, do no damage
         if (_currentHealth == 0)
+        {
+            return;
+        }
+
+        if (IsInvincible)
         {
             return;
         }
@@ -36,6 +48,12 @@ public class HealthController : MonoBehaviour
         if (_currentHealth < 0)
         {
             _currentHealth = 0;
+        }
+
+        //If health is zero, tell unity player is dead
+        if (_currentHealth == 0)
+        {
+            OnDied.Invoke();
         }
     }
 

@@ -164,8 +164,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5755f2dc3c8be64c8c2bd46792ad70e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 1
-  _rotationSpeed: 100
+  _speed: 2
+  _rotationSpeed: 200
 --- !u!114 &2633928558657250821
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -178,7 +178,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 218c71e9ed83f37498a667f8de89c2e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playerAwarenessDistance: 5
+  _playerAwarenessDistance: 10
 --- !u!58 &6562429112780783084
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -253,8 +253,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b9657c690b6a2047b5b28fd08ff6392, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _currentHealth: 0
-  _maximumHealth: 10
+  _currentHealth: 30
+  _maximumHealth: 30
   OnDied:
     m_PersistentCalls:
       m_Calls:
@@ -290,7 +290,7 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
-          m_FloatArgument: 1
+          m_FloatArgument: 0.2
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2

@@ -15,7 +15,7 @@ public class HealthController : MonoBehaviour
     public float RemainingHealthPercentage
 
     {
-        //Calculting haelth percentage
+        //Calculting health percentage
         get
         {
             return _currentHealth / _maximumHealth;

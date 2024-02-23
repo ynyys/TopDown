@@ -6,6 +6,7 @@ public class BulletTest : MonoBehaviour
 {
     // Variables
 
+
     private void OnCollisionEnter2D(Collision2D collision) 
     { 
         //Enemies take damage

@@ -12,10 +12,10 @@ public class EnemyScoreAllocator : MonoBehaviour
 
     private void Awake()
     {
-        _scoreController = FindAnyObjectByType<ScoreController>();
+        _scoreController = FindObjectOfType<ScoreController>();
     }
 
-    public void AllocateSource()
+    public void AllocateScore()
     {
         _scoreController.AddScore(_killScore);
     }

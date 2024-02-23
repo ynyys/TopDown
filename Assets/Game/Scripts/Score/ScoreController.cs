@@ -10,6 +10,7 @@ public class ScoreController : MonoBehaviour
     
     public int Score { get; private set; }
 
+    //To add score to the gamne
     public void AddScore(int amount)
     {
         Score += amount;

@@ -8,6 +8,7 @@ public class EnemyScoreAllocator : MonoBehaviour
     [SerializeField]
     private int _killScore;
 
+    //Linking score controller script
     private ScoreController _scoreController;
 
     private void Awake()
@@ -15,6 +16,7 @@ public class EnemyScoreAllocator : MonoBehaviour
         _scoreController = FindObjectOfType<ScoreController>();
     }
 
+    //Adding score
     public void AllocateScore()
     {
         _scoreController.AddScore(_killScore);

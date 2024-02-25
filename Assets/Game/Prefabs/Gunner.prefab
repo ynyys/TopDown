@@ -130,6 +130,8 @@ GameObject:
   - component: {fileID: 2731476257715621690}
   - component: {fileID: 1790415681985509059}
   - component: {fileID: 4701032411022020432}
+  - component: {fileID: 1937339352242246068}
+  - component: {fileID: 5291635825875155854}
   m_Layer: 0
   m_Name: Gunner
   m_TagString: Untagged
@@ -228,8 +230,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b9657c690b6a2047b5b28fd08ff6392, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _currentHealth: 30
-  _maximumHealth: 30
+  _currentHealth: 20
+  _maximumHealth: 20
   OnDied:
     m_PersistentCalls:
       m_Calls:
@@ -245,7 +247,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1937339352242246068}
         m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
         m_MethodName: set_enabled
         m_Mode: 6
@@ -311,7 +313,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 219985846c7eeb443b0a69f2dbbf8fb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _killScore: 15
+  _killScore: 30
 --- !u!114 &4701032411022020432
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -324,5 +326,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c70cb3ed534158a43ba36404d2d58528, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 5031569067099163822, guid: 11fb7b2f19dd0394789779e59ae1dace, type: 3}
-  bulletPos: {fileID: 4542974392262198188}
+  _bulletPrefab: {fileID: 5031569067099163822, guid: 11fb7b2f19dd0394789779e59ae1dace, type: 3}
+  _gunOffset: {fileID: 4542974392262198188}
+  _timeBetweenShots: 2
+--- !u!114 &1937339352242246068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8159259620119439069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5755f2dc3c8be64c8c2bd46792ad70e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 1.5
+  _rotationSpeed: 200
+--- !u!114 &5291635825875155854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8159259620119439069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 218c71e9ed83f37498a667f8de89c2e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playerAwarenessDistance: 10

@@ -95,13 +95,12 @@ GameObject:
   - component: {fileID: 8389867286019052934}
   - component: {fileID: 1743289429101582389}
   - component: {fileID: 6375189072728325123}
-  - component: {fileID: 2633928558657250821}
   - component: {fileID: 6562429112780783084}
   - component: {fileID: 5289837530391636642}
-  - component: {fileID: 1133515718601317561}
   - component: {fileID: 2217704824071740156}
   - component: {fileID: 941897994242967177}
   - component: {fileID: 3590885630426222691}
+  - component: {fileID: 4390256438814502781}
   m_Layer: 0
   m_Name: Brawler
   m_TagString: Untagged
@@ -166,19 +165,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speed: 2
   _rotationSpeed: 200
---- !u!114 &2633928558657250821
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5823996910328931095}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 218c71e9ed83f37498a667f8de89c2e6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _playerAwarenessDistance: 10
 --- !u!58 &6562429112780783084
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -227,20 +213,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _damageAmount: 10
---- !u!114 &1133515718601317561
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5823996910328931095}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8565b7749b59c3f418a3db8a15e7a704, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 0
-  maxHealth: 3
 --- !u!114 &2217704824071740156
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -337,3 +309,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _killScore: 10
+--- !u!114 &4390256438814502781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5823996910328931095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 218c71e9ed83f37498a667f8de89c2e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playerAwarenessDistance: 8

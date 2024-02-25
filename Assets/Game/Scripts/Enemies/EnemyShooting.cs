@@ -5,40 +5,56 @@ using UnityEngine;
 public class EnemyShooting : MonoBehaviour
 {
     // Varaiables
-    public GameObject bullet;
-    public Transform bulletPos;
+    [SerializeField]
+    private GameObject _bulletPrefab;
 
-    private float timer;
-    private GameObject player;
+    //public GameObject bullet;
+    [SerializeField]
+    private Transform _gunOffset;
+    //public Transform bulletPos;
+    [SerializeField]
+    private float _timeBetweenShots;
+
+    //private float timer;
+    private GameObject _player;
+
+    private bool _fireSingle;
+    private float _lastFireTime;
 
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
+        _player = GameObject.FindGameObjectWithTag("Player");
     }
     // Update is called once per frame
     void Update()
     {
         
-        float distance = Vector2.Distance(transform.position, player.transform.position);
+        float distance = Vector2.Distance(transform.position, _player.transform.position);
 
-        if (distance < 6)
+        if (distance < 8)
         {
-            timer += Time.deltaTime;
+            float timeSinceLastFire = Time.time - _lastFireTime;
+            //timer += Time.deltaTime;
 
-            if(timer > 2)
+            //if (timer > 2)
+            //{
+            // timer = 0;
+            //shoot();
+            //}
+            if (timeSinceLastFire >= _timeBetweenShots)
             {
-                timer = 0;
-                shoot();
-            }
-        }
+                FireBullet();
 
-        
+                _lastFireTime = Time.time;
+                _fireSingle = false;
+            }
+        }  
     }
 
-    void shoot()
+    void FireBullet()
     {
-        Instantiate(bullet, bulletPos.position, Quaternion.identity);
+        Instantiate(_bulletPrefab, _gunOffset.position, Quaternion.identity);
     }
 
 

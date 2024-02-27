@@ -32,7 +32,7 @@ public class EnemyShooting : MonoBehaviour
         
         float distance = Vector2.Distance(transform.position, _player.transform.position);
 
-        if (distance < 8)
+        if (distance < 12)
         {
             float timeSinceLastFire = Time.time - _lastFireTime;
             //timer += Time.deltaTime;

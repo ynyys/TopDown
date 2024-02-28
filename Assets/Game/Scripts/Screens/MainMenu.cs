@@ -5,10 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    // 
-
+    // Start game
     public void StartGame()
     {
       SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex +1);
     }
+
+    //Load credits
+
+    //Quit application
 }

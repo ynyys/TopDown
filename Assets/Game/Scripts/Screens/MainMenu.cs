@@ -12,6 +12,13 @@ public class MainMenu : MonoBehaviour
     }
 
     //Load credits
-
+    public void Credits()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 4);
+    }
     //Quit application
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
 }

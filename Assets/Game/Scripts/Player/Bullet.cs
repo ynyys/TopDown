@@ -10,14 +10,15 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        //When the bullet comes into contact with an enemy
         if (collision.GetComponent<EnemyMovement>())
         {
-            //Destroy(collision.gameObject);
-            //Destroy(gameObject);#
+            //Get health controller script
             var healthController = collision.gameObject.GetComponent<HealthController>();
-
+            //Subtract damage amount from health
             healthController.TakeDamage(_damageAmount);
         }
+        //When bullet collides with any object in the world
         Destroy(gameObject);
     }
 }

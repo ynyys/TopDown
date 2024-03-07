@@ -14,6 +14,7 @@ public class PlayerAwarenessController : MonoBehaviour
 
     private Transform _player;
 
+    //Find player in range
     private void Awake()
     {
         _player = FindObjectOfType<PlayerMovement>().transform;

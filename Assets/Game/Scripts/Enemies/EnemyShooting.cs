@@ -35,19 +35,13 @@ public class EnemyShooting : MonoBehaviour
         if (distance < 12)
         {
             float timeSinceLastFire = Time.time - _lastFireTime;
-            //timer += Time.deltaTime;
 
-            //if (timer > 2)
-            //{
-            // timer = 0;
-            //shoot();
-            //}
             if (timeSinceLastFire >= _timeBetweenShots)
             {
                 FireBullet();
 
                 _lastFireTime = Time.time;
-                _fireSingle = false;
+                //_fireSingle = false;
             }
         }  
     }

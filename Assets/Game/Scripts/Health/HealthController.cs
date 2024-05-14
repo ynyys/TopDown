@@ -11,7 +11,6 @@ public class HealthController : MonoBehaviour
 
     [SerializeField]
     private float _maximumHealth;
-    public HealthbarBehaviour Healthbar;
 
     public float RemainingHealthPercentage
 
@@ -34,10 +33,7 @@ public class HealthController : MonoBehaviour
 
     //When health is changed
     public UnityEvent OnHealthChanged;
-    public void Start()
-    {
-        Healthbar.SetHealth(_currentHealth, _maximumHealth);
-    }
+ 
     //Taking damage
     public void TakeDamage(float damageAmount)
     {

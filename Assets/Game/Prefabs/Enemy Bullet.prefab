@@ -245,7 +245,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _damageAmount: 20
   player: {fileID: 0}
-  force: 13
+  force: 20
 --- !u!70 &-2228954750991221853
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
